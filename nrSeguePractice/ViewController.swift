@@ -14,6 +14,21 @@ var enteredString:String = ""
 
 
 class ViewController: UIViewController {
+    
+    
+    @IBOutlet weak var myLabel: UITextField!
+    
+    
+    @IBAction func myButton(_ sender: Any)
+    {
+        if myLabel.text != ""
+        {
+            enteredString = myLabel.text!
+            //print(enteredString)
+            performSegue(withIdentifier: "goebak", sender: self)
+        }
+    }
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
